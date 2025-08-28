@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Janailson Almeida</title>
+
+    <link rel="stylesheet" href="contato.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header class="header">
+    <a href="../home/index.html" class="logo">Janailson<span>.</span></a>
+    <div class="menu-icon"><i class='bx bx-menu'></i></div>
+    <nav class="navbar">
+        <a href="../home/index.html">Home</a>
+        <a href="../sobre/sobre.html">Sobre Mim</a>
+        <a href="../projetos/projetos.html">Projetos</a>
+        <a href="contato.html" class="active">Contato</a>
+        <button class="btn-theme btn-theme-mobile" onclick="toggleTheme()">Alterar Tema</button>
+    </nav>
+    <div class="header-btn-desktop">
+        <button class="btn-theme" onclick="toggleTheme()">Alterar Tema</button>
+    </div>
+</header>
+
+<main>
+    <section class="contact-section">
+        <div class="section-heading">
+            <h1>Entre em Contato</h1>
+            <p>Estou disponível para novos projetos e colaborações. Envie uma mensagem!</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Vamos Conversar</h3>
+                <p>
+                    Sinta-se à vontade para me contatar por qualquer um dos canais abaixo. Responderei o mais breve possível.
+                </p>
+                <ul>
+                    <li>
+                        <i class='bx bxs-envelope'></i>
+                        <a href="mailto:janailsonfirmino@gmail.com">janailsonfirmino@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class='bx bxl-linkedin-square'></i>
+                        <a href="https://www.linkedin.com/in/janailson-firmino-de-almeida-117360246/" target="_blank">linkedin.com/in/janailson-almeida</a>
+                    </li>
+                    <li>
+                        <i class='bx bxl-github'></i>
+                        <a href="https://github.com/janailsonf-a" target="_blank">github.com/janailsonf-a</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-map'></i>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mauriti+CE+Brasil" target="_blank">Mauriti-CE, Brasil</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xqadeelk" method="POST">
+                    <div class="form-group">
+                        <label for="name">Seu Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Sua Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p class="footer-copyright">
+        © 2025 Janailson Almeida | Todos os direitos reservados.
+        <a href="#">Voltar ao Topo &uarr;</a>
+    </p>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

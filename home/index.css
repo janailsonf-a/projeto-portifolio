@@ -1,0 +1,362 @@
+/* ================================================== */
+/* FONTES E VARIÁVEIS DE TEMA                       */
+/* ================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #f9532d;
+    --background-color: #1F252E;
+    --secondary-background: #2a313c;
+    --text-color: #ededed;
+    --subtle-text-color: #a0aec0;
+    --heading-color: #ffffff;
+    --contrast-color: #ffffff;
+}
+
+.light-theme {
+    --background-color: #f0f2f5;
+    --secondary-background: #ffffff;
+    --text-color: #333333;
+    --subtle-text-color: #555555;
+    --heading-color: #1F252E;
+}
+
+/* ================================================== */
+/* ESTILOS GERAIS                                   */
+/* ================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Trava a rolagem da página quando o menu mobile está aberto */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ================================================== */
+/* CABEÇALHO                                        */
+/* ================================================== */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--heading-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+.logo span { color: var(--primary-color); }
+
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary-color);
+}
+
+.btn-theme {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.btn-theme:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+}
+
+/* Esconde elementos do menu mobile por padrão (desktop) */
+.menu-icon, .btn-theme-mobile {
+    display: none;
+}
+
+/* ================================================== */
+/* SEÇÃO PRINCIPAL (HERO)                           */
+/* ================================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    padding: 120px 10% 60px;
+}
+
+/* --- Imagem e Animação --- */
+.hero-image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+.image-border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    animation: Rotate 8s linear infinite;
+}
+
+.icon-link {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--heading-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    animation: Icon-Path 8s linear infinite;
+    animation-delay: calc(-2s * var(--i));
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.icon-link:hover {
+    transform: scale(1.2);
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+}
+
+/* --- Textos e Títulos --- */
+.hero-text {
+    max-width: 600px;
+}
+.hero-text h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--heading-color);
+}
+.hero-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--subtle-text-color);
+    margin: 20px 0 40px;
+}
+
+/* --- Botões de Ação (CTA) --- */
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--primary-color);
+    font-size: 1.1rem;
+    color: var(--contrast-color);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.btn:hover {
+    box-shadow: 0 0 25px var(--primary-color);
+    transform: translateY(-2px);
+}
+.btn.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+.btn.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* ================================================== */
+/* ANIMAÇÕES                                        */
+/* ================================================== */
+@keyframes Rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes Icon-Path {
+    0% { transform: rotate(0deg) translateX(185px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(185px) rotate(-360deg); }
+}
+
+/* ================================================== */
+/* RESPONSIVIDADE                                   */
+/* ================================================== */
+@media (max-width: 992px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 120px 5% 50px;
+        text-align: center;
+    }
+    .hero-image {
+        width: 350px;
+        height: 350px;
+        margin-bottom: 2rem;
+    }
+    @keyframes Icon-Path {
+        0% { transform: rotate(0deg) translateX(165px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(165px) rotate(-360deg); }
+    }
+    .hero-cta {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        color: var(--heading-color);
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .header .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Começa escondido */
+        width: 100%;
+        height: 100vh;
+        background-color: var(--secondary-background);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s ease;
+    }
+
+    /* Mostra o menu quando ele tem a classe 'active' (via JS) */
+    .header .navbar.active {
+        left: 0;
+    }
+
+    /* Esconde o botão de tema do desktop */
+    .header .header-btn-desktop {
+        display: none;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        margin: 1.5rem 35px;
+    }
+
+    /* Mostra o botão de tema específico do menu mobile */
+    .btn-theme-mobile {
+        display: block;
+        margin-top: 2rem;
+    }
+}
+
+/* ================================================== */
+/* RODAPÉ (FOOTER) - Padrão para todo o site        */
+/* ================================================== */
+.footer {
+    padding: 30px 10%;
+    background-color: var(--secondary-background);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+    transform: translateY(-5px);
+}
+
+.footer-copyright {
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+}
+
+.footer-copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}

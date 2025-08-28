@@ -1,0 +1,255 @@
+/* ================================================== */
+/* FONTES, VARIÁVEIS E ESTILOS GERAIS               */
+/* ================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #f9532d;
+    --background-color: #1F252E;
+    --secondary-background: #2a313c;
+    --text-color: #ededed;
+    --subtle-text-color: #a0aec0;
+    --heading-color: #ffffff;
+    --contrast-color: #ffffff;
+    --border-color: #3b4556;
+}
+
+.light-theme {
+    --background-color: #f0f2f5;
+    --secondary-background: #ffffff;
+    --text-color: #555555;
+    --subtle-text-color: #555555;
+    --heading-color: #1F252E;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 10px var(--primary-color);
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ================================================== */
+/* CABEÇALHO (HEADER) - PADRÃO PARA TODO O SITE     */
+/* ================================================== */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo { font-size: 2rem; color: var(--heading-color); text-decoration: none; font-weight: 700; }
+.logo span { color: var(--primary-color); }
+.navbar a { font-size: 1.1rem; color: var(--text-color); text-decoration: none; font-weight: 500; margin-left: 35px; transition: color 0.3s; }
+.navbar a:hover, .navbar a.active { color: var(--primary-color); }
+.btn-theme { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 8px 20px; border-radius: 6px; cursor: pointer; font-weight: 500; transition: all 0.3s; }
+.btn-theme:hover { background-color: var(--primary-color); color: var(--contrast-color); }
+.menu-icon, .btn-theme-mobile { display: none; }
+
+
+/* ================================================== */
+/* SEÇÃO DE CONTATO                                 */
+/* ================================================== */
+.contact-section {
+    padding: 140px 10% 80px;
+    min-height: 100vh;
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-heading h1 {
+    font-size: 3rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+.section-heading p {
+    font-size: 1.1rem;
+    color: var(--subtle-text-color);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    background-color: var(--secondary-background);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Coluna da Esquerda (Informações) */
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.contact-info p {
+    color: var(--subtle-text-color);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.contact-info ul {
+    list-style-type: none;
+}
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+.contact-info i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* === CÓDIGO ADICIONADO PARA ESTILIZAR OS LINKS === */
+.contact-info li a {
+    color: inherit; /* Herda a cor do texto (cinza claro ou escuro dependendo do tema) */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s;
+}
+.contact-info li a:hover {
+    color: var(--primary-color); /* Fica laranja ao passar o mouse */
+    text-decoration: underline;
+}
+/* ================================================== */
+
+/* Coluna da Direita (Formulário) */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--subtle-text-color);
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+.form-group textarea {
+    resize: vertical;
+}
+
+/* ================================================== */
+/* RESPONSIVIDADE                                   */
+/* ================================================== */
+@media (max-width: 992px) {
+    .contact-section { padding: 120px 5% 50px; }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    /* Mesmo menu mobile da Home */
+    .menu-icon { display: flex; align-items: center; font-size: 2.5rem; color: var(--heading-color); cursor: pointer; z-index: 1001; }
+    .header .navbar { position: fixed; top: 0; left: -100%; width: 100%; height: 100vh; background-color: var(--secondary-background); display: flex; flex-direction: column; justify-content: center; align-items: center; transition: left 0.4s ease; }
+    .header .navbar.active { left: 0; }
+    .header .header-btn-desktop { display: none; }
+    .navbar a { font-size: 1.5rem; margin: 1.5rem 35px; }
+    .btn-theme-mobile { display: block; margin-top: 2rem; }
+}
+
+
+/* ================================================== */
+/* RODAPÉ (FOOTER) - Padrão para todo o site        */
+/* ================================================== */
+.footer {
+    padding: 30px 10%;
+    background-color: var(--secondary-background);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+    transform: translateY(-5px);
+}
+
+.footer-copyright {
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+}
+
+.footer-copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}

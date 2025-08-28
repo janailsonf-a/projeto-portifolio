@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projetos | Janailson Almeida</title>
+    <meta name="description" content="Explore os projetos desenvolvidos por Janailson Almeida, incluindo sistemas de gestão, aplicações web e mais.">
+
+    <link rel="stylesheet" href="projetos.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header class="header">
+    <a href="../home/index.html" class="logo">Janailson<span>.</span></a>
+    <div class="menu-icon"><i class='bx bx-menu'></i></div>
+    <nav class="navbar">
+        <a href="../home/index.html">Home</a>
+        <a href="../sobre/sobre.html">Sobre Mim</a>
+        <a href="projetos.html" class="active">Projetos</a>
+        <a href="../contato/contato.html">Contato</a>
+        <button class="btn-theme btn-theme-mobile" onclick="toggleTheme()">Alterar Tema</button>
+    </nav>
+    <div class="header-btn-desktop">
+        <button class="btn-theme" onclick="toggleTheme()">Alterar Tema</button>
+    </div>
+</header>
+
+<main>
+    <section class="projects-section">
+        <div class="section-heading">
+            <h1>Meus Projetos</h1>
+            <p>Explore alguns dos meus trabalhos e veja o que sou capaz de construir.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-tech="php,mysql,javascript">
+                <img src="img/miniErp.png" alt="Mini ERP" class="project-card-image">
+                <div class="project-card-content">
+                    <h3>Mini ERP</h3>
+                    <p>Sistema de gestão para pequenas operações de e-commerce.</p>
+                    <div class="project-card-tech">
+                        <span>PHP</span><span>MySQL</span><span>JS</span>
+                    </div>
+                    <div class="project-card-links">
+                        <a href="#" class="btn btn-detail" data-project-id="mini-erp">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-tech="laravel,php">
+                <img src="img/porquinho.png" alt="Porquinho Turbo" class="project-card-image">
+                <div class="project-card-content">
+                    <h3>Porquinho Turbo</h3>
+                    <p>Aplicação web para gerenciamento de finanças pessoais.</p>
+                    <div class="project-card-tech">
+                        <span>Laravel (PHP)</span>
+                    </div>
+                    <div class="project-card-links">
+                        <a href="#" class="btn btn-detail" data-project-id="porquinho-turbo">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-tech="react,python,flask,tailwind">
+                <img src="img/anexaFacil.png" alt="Anexa Fácil" class="project-card-image">
+                <div class="project-card-content">
+                    <h3>Anexa Fácil</h3>
+                    <p>Automatizador de boletos e comprovantes em PDF.</p>
+                    <div class="project-card-tech">
+                        <span>React.js</span><span>Flask(Python)</span><span>Tailwind CSS</span>
+                    </div>
+                    <div class="project-card-links">
+                        <a href="#" class="btn btn-detail" data-project-id="anexa-facil">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-full-description"></p>
+        <div id="modal-gallery" class="modal-gallery">
+        </div>
+        <div id="modal-tech" class="project-card-tech"></div>
+        <div class="modal-links">
+            <a id="modal-github-link" href="#" target="_blank" class="btn btn-secondary" style="display: none;">Ver no GitHub</a>
+            <a id="modal-demo-link" href="#" target="_blank" class="btn" style="display: none;">Ver Online</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-social">
+        <a href="https://github.com/janailsonf-a" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/janailson-firmino-de-almeida-117360246/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/janailson.amd/" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="#" target="_blank"><i class='bx bxl-telegram'></i></a>
+    </div>
+    <p class="footer-copyright">
+        © 2025 Janailson Almeida | Todos os direitos reservados.
+        <a href="#">Voltar ao Topo &uarr;</a>
+    </p>
+</footer>
+
+<script src="../main.js"></script> <script src="../projetos.js"></script> </body>
+
+</html>
