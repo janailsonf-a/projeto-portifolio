@@ -37,13 +37,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dados dos projetos para o modal (você pode carregar isso de um JSON no futuro)
     const projectsData = {
+        "fila": {
+            title: "Fila (em andamento)",
+            description: "Mini plataforma de venda de ingressos construída como microsserviços orientados a eventos, para praticar sistemas distribuídos do jeito certo. Os serviços em Laravel conversam via RabbitMQ, e o fluxo de compra usa o padrão Saga com compensação (reservar → pagar → confirmar ou desfazer). Roda na Azure Container Apps com escala automática pelo tamanho da fila (KEDA), infraestrutura como código com Terraform, CI/CD com GitHub Actions + OIDC (sem segredo guardado) e observabilidade com OpenTelemetry + Grafana.",
+            tech: ["Laravel", "RabbitMQ", "Azure Container Apps", "KEDA", "Terraform", "GitHub Actions", "OpenTelemetry"],
+            github: null,
+            demo: null,
+            images: []
+        },
+        "noxis": {
+            title: "Noxis",
+            description: "Sistema de indexação e busca de arquivos de alto desempenho, construído com FastAPI. Indexa metadados para busca rápida, usa SQLite FTS5 para busca de texto completo, monitora o sistema (CPU, RAM e disco) e valida o tratamento de arquivos com segurança.",
+            tech: ["Python", "FastAPI", "SQLite FTS5"],
+            github: "https://github.com/janailsonf-a/Noxis-Python",
+            demo: null,
+            images: []
+        },
+        "central-desk": {
+            title: "Central Desk",
+            description: "Sistema de help desk para gestão de chamados e solicitações internas, construído com Laravel. Tem autenticação, interface web e API para integração com outros sistemas.",
+            tech: ["Laravel", "PHP", "API REST"],
+            github: "https://github.com/janailsonf-a/Central-Desk",
+            demo: null,
+            images: []
+        },
         "mini-erp": {
             title: "Mini ERP",
             description: "O Mini ERP é um sistema de gestão completo e funcional para pequenas operações de e-commerce, desenvolvido do zero para controlar de forma integrada as principais rotinas de uma loja virtual: produtos, estoque, pedidos e promoções. O projeto foi concebido como um desafio técnico para aplicar e demonstrar habilidades em desenvolvimento backend com PHP Puro, seguindo as melhores práticas de mercado.",
             tech: ["PHP", "MySQL", "JavaScript"],
             github: "https://github.com/janailsonf-a/mini-erp-php.git",
             demo: null, // Se não tiver demo, use null
-            images: ["img/miniErp.png", "img/miniErp-detail-2.png", "img/miniErp-detail-3.png"] // Exemplo de mais imagens
+            images: ["img/miniErp.png"]
         },
         "porquinho-turbo": {
             title: "Porquinho Turbo",

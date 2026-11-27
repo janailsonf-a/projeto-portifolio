@@ -267,6 +267,22 @@ body.no-scroll {
     color: var(--subtle-text-color);
 }
 
+/* --- Card de estatísticas do GitHub --- */
+.github-stats {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.github-stats h3 {
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 25px;
+}
+.github-stats img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* --- Seção CTA --- */
 .about-cta {
     text-align: center;
