@@ -437,7 +437,7 @@ body.no-scroll {
 }
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     text-align: left;
 }
@@ -490,6 +490,9 @@ body.no-scroll {
 @media (max-width: 992px) {
     .highlights { padding: 10px 5% 70px; }
     .stats { grid-template-columns: repeat(2, 1fr); }
+    .featured-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
     .featured-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
