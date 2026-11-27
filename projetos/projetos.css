@@ -183,6 +183,7 @@ body.no-scroll {
 .projects-grid .project-card:nth-child(4) { animation-delay: 1.0s; }
 .projects-grid .project-card:nth-child(5) { animation-delay: 1.2s; }
 .projects-grid .project-card:nth-child(6) { animation-delay: 1.4s; }
+.projects-grid .project-card:nth-child(7) { animation-delay: 1.6s; }
 
 /* Card sem screenshot: bloco com ícone no lugar da imagem */
 .project-card-image.project-card-placeholder {
