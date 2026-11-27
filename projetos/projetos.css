@@ -209,6 +209,19 @@ body.no-scroll {
 }
 /* Adicione mais delays se tiver muitos cards */
 
+/* Seção de sistemas da ONG (sem modal, sem filtro) */
+.section-heading-ong {
+    margin-top: 80px;
+}
+.section-heading-ong h2 {
+    font-size: 2.2rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+.projects-grid-ong .project-card {
+    cursor: default;
+}
+
 
 .project-card:hover {
     transform: translateY(-8px);
