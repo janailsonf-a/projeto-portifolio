@@ -35,5 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Alterna a classe 'no-scroll' no body para travar/destravar a rolagem
             document.body.classList.toggle('no-scroll');
         });
+        // Teclado: Enter ou Espaço abrem o menu (o ícone tem role="button")
+        menuIcon.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                menuIcon.click();
+            }
+        });
     }
 });

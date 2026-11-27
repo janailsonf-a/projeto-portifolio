@@ -48,7 +48,7 @@ body.no-scroll {
     border: none;
     box-shadow: 0 0 10px var(--primary-color);
     font-size: 1.1rem;
-    color: #fff;
+    color: #1F252E;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
@@ -118,7 +118,7 @@ body.no-scroll {
 }
 
 /* Coluna da Esquerda (Informações) */
-.contact-info h3 {
+.contact-info h2 {
     font-size: 1.8rem;
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -249,7 +249,8 @@ body.no-scroll {
 }
 
 .footer-copyright a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--heading-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
     font-weight: 600;
 }
