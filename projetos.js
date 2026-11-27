@@ -61,14 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             demo: null,
             images: []
         },
-        "termohigrometro": {
-            title: "IoT Termohigrômetro",
-            description: "Projeto de Internet das Coisas para monitorar a temperatura e a umidade de ambientes onde ficam armazenados medicamentos. Um ESP32 lê os sensores e acompanha as condições do ambiente, que precisam ficar dentro de faixas seguras para preservar os remédios.",
-            tech: ["IoT", "ESP32", "Sensores"],
-            github: null,
-            demo: null,
-            images: []
-        },
         "mini-erp": {
             title: "Mini ERP",
             description: "O Mini ERP é um sistema de gestão completo e funcional para pequenas operações de e-commerce, desenvolvido do zero para controlar de forma integrada as principais rotinas de uma loja virtual: produtos, estoque, pedidos e promoções. O projeto foi concebido como um desafio técnico para aplicar e demonstrar habilidades em desenvolvimento backend com PHP Puro, seguindo as melhores práticas de mercado.",
